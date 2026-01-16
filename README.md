@@ -1,77 +1,123 @@
-<<<<<<< HEAD
-# demo-gym-site
-=======
-# React + TypeScript + Vite
+# IronForge Gym Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A demo gym website built with **React**, **TypeScript**, and **Vite**. This project serves as a minimal starter and presentation site using modern frontend tooling and best practices for building fast, interactive web user interfaces.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository contains the source code for a demo gym site application. It is implemented using:
+- **React** (UI library)
+- **TypeScript** (typed JavaScript)
+- **Vite** (fast frontend tooling / bundler)
+- **Tailwind CSS** (utility-first styling)
 
-## React Compiler
+The application is designed to be responsive and extensible for typical gym site features — including navigation, hero sections, class listings, pricing, and other content relevant to a fitness company.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Built with **React + TypeScript**
+- Fast development experience powered by **Vite**
+- Modern and responsive UI
+- Tailwind CSS for styling
+- Clear folder structure for components and assets
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Technology | Purpose |
+|------------|---------|
+| React      | Component-based UI |
+| TypeScript | Static typing |
+| Vite       | Dev server & build tool |
+| Tailwind CSS | Utility-first styling |
+| Node.js    | Runtime / npm scripts |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+Ensure you have **Node.js (v16 or higher)** and **npm** installed:
+
+```bash
+node -v
+npm -v
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/s3ldc/demo-gym-site.git
 ```
->>>>>>> fed2ab3 (created gym demo site for the client presentation)
+
+2. Navigate into the project directory:
+
+```bash
+cd demo-gym-site
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+### Running Locally
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+This will start a local development server (usually at `http://localhost:5173`) with hot module reloading.
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+The optimized output will be in the `dist/` directory.
+
+### Preview Production Build
+
+To locally preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+demo-gym-site/
+├─ public/                     Static assets
+├─ src/
+│  ├─ assets/                 Images, fonts, etc.
+│  ├─ components/             Reusable React components
+│  ├─ App.tsx                 Root React component
+│  └─ main.tsx                Vite entry point
+├─ .gitignore                 Git ignore rules
+├─ package.json               NPM scripts & dependencies
+├─ postcss.config.js          PostCSS config
+├─ tailwind.config.ts         Tailwind CSS config
+├─ tsconfig.json              TypeScript config
+└─ vite.config.ts             Vite config
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests for improvements.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/foo`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/foo`)
+5. Open a Pull Request
+
+## License
+
+This project does not specify a license in the repo. You may choose and add a suitable license (e.g., MIT License) if you plan to publish or share widely.
+
